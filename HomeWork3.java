@@ -3,24 +3,24 @@ package algorithms;
 public class HomeWork3 {
     public static void main(String[] args) {
 
-        System.out.println(getFibonacciValue(10));
-        System.out.println(getFibonacciValue(20));
-        System.out.println(getFibonacciValue(30));
-        System.out.println(getFibList(10));
-        System.out.println(getFibList(20));
-        System.out.println(getFibList(30));
+        System.out.println(getFibRec(10));
+        System.out.println(getFibRec(20));
+        System.out.println(getFibRec(30));
+        System.out.println(getFibIter(10));
+        System.out.println(getFibIter(20));
+        System.out.println(getFibIter(30));
     }
-    public static int getFibonacciValue(int n){
+    public static int getFibRec(int n){
         if (n == 0){
             return 0;
         } else if (n == 1) {
             return 1;
         } else {
-            return getFibonacciValue(n-1) + getFibonacciValue(n -2);
+            return getFibRec(n-1) + getFibRec(n -2);
         }
     }
 
-    public static int getFibList(int n){
+    public static int getFibIter(int n){
         int first = 0;
         int second = 1;
         int next = 0;
